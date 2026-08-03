@@ -99,7 +99,7 @@
     min-height:100vh;
     display:flex;
     align-items:center;
-    padding:96px 32px 90px;
+    padding:140px 32px 90px;
     overflow:hidden;
   }
   .grid-bg{
@@ -214,8 +214,6 @@
   }
   .flightpath .jet{ position:absolute; top:50%; left:-40px; transform:translateY(-50%); width:22px; height:22px; animation:fly 10s linear infinite; }
   @keyframes fly{ 0%{left:-5%;} 100%{left:105%;} }
-  .header-flightpath{ margin-top:97px; height:44px; }
-  .header-flightpath .jet{ animation-duration:8s; }
 
   /* ---------- section shell ---------- */
   section{ position:relative; padding:100px 0; }
@@ -362,15 +360,6 @@
     </div>
   </div>
 </header>
-
-<div class="flightpath header-flightpath">
-  <div class="track"></div>
-  <svg class="jet" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <g transform="rotate(90 50 50)">
-      <path d="M50 8 L58 45 L92 62 L92 70 L58 60 L54 88 L64 96 L64 100 L50 96 L36 100 L36 96 L46 88 L42 60 L8 70 L8 62 L42 45 Z" fill="#dc9d3e"/>
-    </g>
-  </svg>
-</div>
 
 <main id="top">
 
