@@ -249,18 +249,29 @@
   .about-body strong{ color:var(--ink); font-weight:700; }
 
   /* ---------- expertise ---------- */
-  .exp-grid{ display:grid; grid-template-columns:repeat(5, 1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .exp-grid{ display:grid; grid-template-columns:repeat(4, 1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
   .exp-cell{
     background:var(--bg);
-    padding:28px 22px;
-    min-height:140px;
-    display:flex; flex-direction:column; justify-content:space-between;
+    padding:34px 30px;
+    min-height:220px;
+    display:flex; flex-direction:column;
     transition:background .25s ease;
   }
   .exp-cell:hover{ background:var(--bg-card); }
+  .exp-cell .cell-top{ display:flex; align-items:flex-start; justify-content:space-between; }
   .exp-cell .num{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--mute-dim); letter-spacing:0.08em; }
-  .exp-cell h4{ font-size:17px; font-weight:700; margin-top:20px; line-height:1.3; color:var(--ink); }
+  .exp-icon{
+    width:46px; height:46px; margin-top:18px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:50%; border:1px solid var(--border-amber);
+    color:var(--amber-bright); flex-shrink:0;
+    transition:border-color .25s ease, background .25s ease;
+  }
+  .exp-icon svg{ width:24px; height:24px; }
+  .exp-cell:hover .exp-icon{ background:rgba(220,157,62,0.1); border-color:var(--amber-bright); }
+  .exp-cell h4{ font-size:16.5px; font-weight:700; margin-top:18px; line-height:1.3; color:var(--ink); }
   .exp-cell:hover h4{ color:var(--amber-bright); }
+  .exp-cell p{ margin-top:10px; color:var(--mute); font-size:13px; line-height:1.65; }
 
   /* ---------- values band ---------- */
   .values-band{ background:var(--bg-card); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
@@ -462,18 +473,78 @@
         <p>A full-spectrum portfolio spanning aerial systems, detection &amp; security, and ground &amp; aviation support &mdash; engineered for indigenous defence readiness.</p>
       </div>
       <div class="exp-grid reveal">
-        <div class="exp-cell"><span class="num">01</span><h4>UAVs</h4></div>
-        <div class="exp-cell"><span class="num">02</span><h4>Counter-Drone Systems</h4></div>
-        <div class="exp-cell"><span class="num">03</span><h4>Passive RF Detection</h4></div>
-        <div class="exp-cell"><span class="num">04</span><h4>Drone Detection Radars</h4></div>
-        <div class="exp-cell"><span class="num">05</span><h4>Command &amp; Control Systems</h4></div>
-        <div class="exp-cell"><span class="num">06</span><h4>Remote-Controlled Weapon Stations (RCWS)</h4></div>
-        <div class="exp-cell"><span class="num">07</span><h4>Integrated Perimeter Security Systems</h4></div>
-        <div class="exp-cell"><span class="num">08</span><h4>Aviation MRO</h4></div>
-        <div class="exp-cell"><span class="num">09</span><h4>Ground Support Equipment</h4></div>
-        <div class="exp-cell"><span class="num">10</span><h4>Electrical, Electronic &amp; Engineering Solutions</h4></div>
-        <div class="exp-cell"><span class="num">11</span><h4>Software Development &amp; Testing</h4></div>
-        <div class="exp-cell"><span class="num">12</span><h4>Software Verification &amp; Validation</h4></div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">01</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2.2"/><circle cx="19" cy="5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><path d="M6.6 6.6 10.5 10.5M17.4 6.6 13.5 10.5M6.6 17.4 10.5 13.5M17.4 17.4 13.5 13.5"/><rect x="10" y="10" width="4" height="4" rx="0.6"/></svg></div>
+          <h4>UAVs</h4>
+          <p>Indigenous unmanned aerial platforms engineered for surveillance, reconnaissance, and tactical missions.</p>
+        </div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">02</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="2"/><path d="M4 4 20 20M9 4v2M4 9h2M14 9h2.5M9 14v2.5"/></svg></div>
+          <h4>Counter-Drone Systems</h4>
+          <p>Detect, track, and neutralize hostile drones with layered defensive countermeasures.</p>
+        </div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">03</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v13"/><path d="M8 8a5.5 5.5 0 0 1 8 0M5.5 5a9 9 0 0 1 13 0"/><circle cx="12" cy="19" r="1.6" fill="currentColor" stroke="none"/></svg></div>
+          <h4>Passive RF Detection</h4>
+          <p>Silent, non-emitting sensors that identify and locate RF emissions across the battlefield.</p>
+        </div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">04</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12 12 4"/><path d="M12 12 18 8"/><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></div>
+          <h4>Drone Detection Radars</h4>
+          <p>Long-range radar systems providing continuous, all-weather aerial threat detection.</p>
+        </div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">05</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="12" rx="1"/><path d="M8 20h8M12 16.5v3.5"/><path d="M7 9h4M7 12h6"/></svg></div>
+          <h4>Command &amp; Control Systems</h4>
+          <p>Integrated C2 platforms that unify sensors, assets, and decision-making in real time.</p>
+        </div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">06</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><rect x="7" y="7" width="10" height="6" rx="1"/><path d="M9 13v3M15 13v3M6 20h12"/></svg></div>
+          <h4>Remote-Controlled Weapon Stations (RCWS)</h4>
+          <p>Precision-stabilized, remotely operated weapon platforms for enhanced crew protection.</p>
+        </div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">07</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6.5v5c0 5 3.4 8.6 8 9.5 4.6-.9 8-4.5 8-9.5v-5Z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h4>Integrated Perimeter Security Systems</h4>
+          <p>Multi-layered fencing, sensor, and surveillance networks securing critical installations.</p>
+        </div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">08</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4 4 20"/><path d="M14.5 4c1 2-1 4-1 4l2.5 2.5s2-3 4-1M9.5 20c-1-2 1-4 1-4L8 13.5s-2 3-4 1"/></svg></div>
+          <h4>Aviation MRO</h4>
+          <p>Maintenance, repair, and overhaul services sustaining fleet readiness and airworthiness.</p>
+        </div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">09</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V9h9l3 3h4v4"/><path d="M3 16h1"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/><path d="M9 17.5h6.4"/></svg></div>
+          <h4>Ground Support Equipment</h4>
+          <p>Rugged vehicles and equipment enabling efficient flight-line and airfield operations.</p>
+        </div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">10</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="8" rx="1"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M18 6l-2 2M6 18l2-2M18 18l-2-2"/></svg></div>
+          <h4>Electrical, Electronic &amp; Engineering Solutions</h4>
+          <p>Custom electrical and electronic engineering for mission-critical defence platforms.</p>
+        </div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">11</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M14 6l-4 12"/></svg></div>
+          <h4>Software Development &amp; Testing</h4>
+          <p>Secure, mission-grade software engineered and rigorously tested for defence systems.</p>
+        </div>
+        <div class="exp-cell">
+          <div class="cell-top"><span class="num">12</span></div>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="1.5"/><path d="M9 4V3.4A1.4 1.4 0 0 1 10.4 2h3.2A1.4 1.4 0 0 1 15 3.4V4"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h4>Software Verification &amp; Validation</h4>
+          <p>Independent V&amp;V processes ensuring compliance, reliability, and mission assurance.</p>
+        </div>
       </div>
     </div>
   </section>
